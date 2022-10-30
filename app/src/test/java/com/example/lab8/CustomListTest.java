@@ -1,6 +1,8 @@
 package com.example.lab8;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,18 +27,25 @@ public class CustomListTest {
     @Test
     public void hasCityTest() {
         City city = new City("Edmonton", "AB");
-        assertEquals(list.hasCity(city), false);
+        assertFalse(list.hasCity(city));
         list.addCity(city);
-        assertEquals(list.hasCity(city), true);
+        assertTrue(list.hasCity(city));
     }
 
-    /* Signatures for other funcs
+
 
     @Test
     public void deleteCityTest() {
-
+        int listSize = list.getCount();
+        City city = new City("Saskatchewan", "SK");
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
+        list.deleteCity(city);
+        assertFalse(list.hasCity(city));
+        assertEquals(list.getCount(),listSize);
     }
 
+    /* Signatures for other funcs
     @Test
     public void countCityTest() {
 
