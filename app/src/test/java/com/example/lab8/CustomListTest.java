@@ -47,13 +47,14 @@ public class CustomListTest {
     public void countCitiesTest() {
         CustomList cityList = new CustomList(null, new ArrayList<City>());
         City city = new City("Saskatchewan", "SK");
-        assertEquals(0, cityList.getCount());
+        assertEquals(cityList.getCount(), cityList.countCities());
+        assertEquals(0, cityList.countCities());
 
         list.addCity(city);
-        assertEquals(1, cityList.getCount());
+        assertEquals(1, cityList.countCities());
 
         list.remove(city);
-        assertEquals(0, cityList.getCount());
+        assertEquals(0, cityList.countCities());
     }
 
 }
