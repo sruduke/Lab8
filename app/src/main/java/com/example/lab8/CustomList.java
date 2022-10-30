@@ -45,9 +45,10 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
-    public int getCount(){
-        return cities.size();
-    }
+    // countCities() already implemented?
+    //public int getCount(){
+    //    return cities.size();
+    //}
 
     public void addCity(City city){
         cities.add(city);
@@ -64,11 +65,5 @@ public class CustomList extends ArrayAdapter<City> {
         }
         throw new IllegalArgumentException("The provided city is not in the list");
     }
-
-    /*
-    public int countCities() {
-    }
-
-     */
 
 }

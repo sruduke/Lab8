@@ -32,8 +32,6 @@ public class CustomListTest {
         assertTrue(list.hasCity(city));
     }
 
-
-
     @Test
     public void deleteCityTest() {
         int listSize = list.getCount();
@@ -45,13 +43,17 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize);
     }
 
-    /* Signatures for other funcs
     @Test
-    public void countCityTest() {
+    public void countCitiesTest() {
+        CustomList cityList = new CustomList(null, new ArrayList<City>());
+        City city = new City("Saskatchewan", "SK");
+        assertEquals(0, cityList.getCount());
 
+        list.addCity(city);
+        assertEquals(1, cityList.getCount());
+
+        list.remove(city);
+        assertEquals(0, cityList.getCount());
     }
-
-     */
-
 
 }
